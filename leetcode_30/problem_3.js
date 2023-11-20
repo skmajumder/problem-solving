@@ -1,15 +1,11 @@
 const createCounter = function (init) {
   let initCount = init; // * Hidden state
 
-  function increment() {
-    return ++initCount;
-  }
-  function decrement() {
-    return --initCount;
-  }
-  function reset() {
-    return (initCount = init);
-  }
+  const increment = () => ++initCount;
+
+  const decrement = () => --initCount;
+
+  const reset = () => (initCount = init);
 
   return {
     increment,
